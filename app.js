@@ -38,7 +38,7 @@ app.post("/", (req, res) => {
 
     const options = {
         method: "POST",
-        auth: "josevs:becb2e6c372b225ad54e4c944e740c7f-us20"
+        auth: `josevs:${process.env.API_KEY}`
     }
 
     const request = https.request(url, options, (response) => {
@@ -65,9 +65,6 @@ port = process.env.PORT || 3000;
 app.listen(port, () => {
     console.log(`The server is running on port ${port}.`)
 })
-
-// API Key:
-// becb2e6c372b225ad54e4c944e740c7f-us20
 
 // List ID:
 // 53e5018553
